@@ -31,15 +31,21 @@ public class Program {
 			System.out.println(obj);
 		}
 		
+		/*
 		System.out.println("\n===== Test 4: Insert Seller =====");
 		Seller newSeller = new Seller(null, "Gregory Orange", "greg@gmail.com", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! New id = " + newSeller.getId());
+		*/
 		
 		System.out.println("\n===== Test 5: Update Seller =====");
 		seller = sellerDao.findById(1);
 		seller.setName("Robert Brown");
 		sellerDao.update(seller);
 		System.out.println("Updated!");
+		
+		System.out.println("\n===== Test 6: Delete Seller =====");
+		sellerDao.deleteById(10);
+		System.out.println("Deleted!");
 	}
 }
